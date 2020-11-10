@@ -1,0 +1,5 @@
+<h2>Contenido Secundario</h2>
+<app-seeUsers (sendUser)="seeUser($event)"></app-seeUsers>
+<div *ngIf="usuario">
+    <app-user [user]="usuario"></app-user>
+</div>

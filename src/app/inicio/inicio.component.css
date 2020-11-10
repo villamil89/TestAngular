@@ -1,0 +1,23 @@
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: justify;
+}
+
+.container .title {
+    background: black;
+    color: aliceblue;
+    text-align: center;
+}
+
+.container .red-text {
+    color: red;
+    font-size: large;
+}
+
+.container .blue-text {
+    color: blue;
+    font-size: large;
+}

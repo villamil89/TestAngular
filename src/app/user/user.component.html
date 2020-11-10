@@ -1,0 +1,37 @@
+<h3>Usuario</h3>
+<hr>
+<form [formGroup]="userForm" novalidate (ngSubmit)="onSubmit()" *ngIf="user">
+    <div class="ui-g-12">
+        <label>Usuario</label>
+        <label *ngIf="userForm.get('user').hasError('required')" style="color: red;"> *</label>
+        <input class="ui-g-12" formControlName="user" pInputText type="text"  />
+        <span class="ui-g-12">{{handlerError('user')}}</span>
+    </div>
+    <div class="ui-g-12">
+        <label>Password</label>
+        <label *ngIf="userForm.get('password').hasError('required')" style="color: red;"> *</label>
+        <input class="ui-g-12" formControlName="password" pInputText type="password"  />
+        <span class="ui-g-12">{{handlerError('password')}}</span>
+    </div>
+    <div class="ui-g-12">
+        <label>Nombre usuario</label>
+        <label *ngIf="userForm.get('first_name').hasError('required')" style="color: red;"> *</label>
+        <input class="ui-g-12" formControlName="first_name" pInputText type="text"  />
+        <span class="ui-g-12">{{handlerError('first_name')}}</span>
+    </div>
+    <div class="ui-g-12">
+        <label>Apellido usuario</label>
+        <label *ngIf="userForm.get('last_name').hasError('required')" style="color: red;"> *</label>
+        <input class="ui-g-12" formControlName="last_name" pInputText type="text"  />
+        <span class="ui-g-12">{{handlerError('last_name')}}</span>
+    </div>
+    <div class="ui-g-12">
+        <label>Email usuario</label>
+        <label *ngIf="userForm.get('email').hasError('required')" style="color: red;"> *</label>
+        <input class="ui-g-12" formControlName="email" pInputText type="text"  />
+        <span class="ui-g-12">{{handlerError('email')}}</span>
+    </div>
+    <button pButton type="submit" label="Crear Usuario" style="margin-bottom:10px" class="blue-grey-btn"
+        icon="pi pi-check" [disabled]="userForm.invalid" *ngIf="!user">
+    </button>
+</form>
